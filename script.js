@@ -1,26 +1,26 @@
 
-let count = JSON.parse(localStorage.getItem("countItems"));
-if (count == null || count == 0) {
-    count = 0;
-}
-let toDoList = JSON.parse(localStorage.getItem("todoItems"));
+// let count = JSON.parse(localStorage.getItem("countItems"));
+// if (count == null || count == 0) {
+//     count = 0;
+// }
+// let toDoList = JSON.parse(localStorage.getItem("todoItems"));
 
-if (toDoList !== null) {
-    console.log(toDoList);
-    toDoList.forEach(element => {
-        presentTask(element.name, element.dueDate, element.dueTime, element.taskId, element.isFinished);
+// if (toDoList !== null) {
+//     console.log(toDoList);
+//     toDoList.forEach(element => {
+//         presentTask(element.name, element.dueDate, element.dueTime, element.taskId, element.isFinished);
 
-    });
-    // renderTodoList();
-}
-else {
-    toDoList = [];
-}
+//     });
+//     // renderTodoList();
+// }
+// else {
+toDoList = [];
+//}
 
 function emptyList() {
     document.querySelector('.js-todo-list').innerHTML = '';
-    localStorage.removeItem('todoItems');
-    localStorage.removeItem('countItems');
+    // localStorage.removeItem('todoItems');
+    // localStorage.removeItem('countItems');
     count = 0;
     toDoList = [];
 
@@ -30,7 +30,6 @@ function emptyList() {
 
 function addToDo() {
 
-    let taskId = count++;
 
     const inputElement = document.querySelector('.js-name-input');
     const name = inputElement.value;
@@ -43,25 +42,24 @@ function addToDo() {
     inputElement.value = "";
     dateInputElem.value = "";
     timeInputElem.value = "";
-    console.log(taskId);
+    // console.log(taskId);
 
     toDoList.push({
-        taskId: taskId,
         name: name,
         dueDate: dueDate,
         dueTime: dueTime,
         isFinished: false
     });
-    console.log(taskId);
-    presentTask(name, dueDate, dueTime, taskId);
+    // console.log(taskId);
+    presentTask(name, dueDate, dueTime);
 
 
 
 
 
-    localStorage.setItem('countItems', JSON.stringify(count));
-    localStorage.setItem('todoItems', JSON.stringify(toDoList));
-    console.log(toDoList);
+    // localStorage.setItem('countItems', JSON.stringify(count));
+    // localStorage.setItem('todoItems', JSON.stringify(toDoList));
+    // console.log(toDoList);
     // renderTodoList(toDoList);
 }
 
@@ -105,11 +103,11 @@ function markFinished(checkbox, taskId) {
 
         }
         else {
-            console.log('else');
+            // console.log('else');
         }
     });
-    localStorage.setItem('todoItems', JSON.stringify(toDoList));
-    console.log(toDoList);
+    // localStorage.setItem('todoItems', JSON.stringify(toDoList));
+    // console.log(toDoList);
 
 }
 
@@ -131,8 +129,8 @@ function removeTask(button) {
             task.dueTime === dueTime)
     );
     toDoList = filteredArray;
-    localStorage.setItem('todoItems', JSON.stringify(toDoList));
-    console.log(toDoList);
+    // localStorage.setItem('todoItems', JSON.stringify(toDoList));
+    // console.log(toDoList);
 }
 function presentTask(name, dueDate, dueTime, taskId, isFinished) {
     let labelMessage = '';
@@ -178,8 +176,8 @@ function presentTask(name, dueDate, dueTime, taskId, isFinished) {
     // markFinished(this, JSON.stringify(arr));
 
     let checkbox = li.querySelector('.js-check-box');
-    console.log(checkbox)
-    console.log(checkbox);
+    // console.log(checkbox)
+    // console.log(checkbox);
     if ((isFinished) === true) {
         checkbox.click();
     }
