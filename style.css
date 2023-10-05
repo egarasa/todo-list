@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* margin: 50px; */
+    margin-top: 50px;
+    background-image: url('work.jpg');
+    /* Replace 'background.jpg' with your image file path */
+    background-size: cover;
+    /* This will make the background image cover the entire body */
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+
+.container {
+
+    font-size: 16px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    /* background-color: #f2c0c0; */
+
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Adding a semi-transparent background to improve readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(3, 3, 3, 0.1);
+}
+
+.task-container {
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 50px 250px 200px 150px 100px 150px;
+    row-gap: 10px;
+    column-gap: 12px;
+    align-items: center;
+    margin-top: 10px;
+    /* border-bottom: 1px solid black; */
+}
+
+.todo-input-grid {
+
+    padding-left: 40px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 50px 250px 200px 150px 100px 150px;
+    column-gap: 12px;
+    margin-bottom: 10px;
+    align-items: stretch;
+
+}
+
+.check-box {
+    height: 38px;
+    width: 38px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 5px;
+
+}
+
+.check-boxes {
+    height: 25px;
+    width: 25px;
+    padding: 0px;
+    margin-right: 12px;
+    border-radius: 5px;
+}
+
+.warning {
+    color: yellow;
+    animation: blink 1s infinite alternate;
+}
+
+.remove-message {
+    color: yellow;
+    animation: none;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+.name-input,
+.due-date-input {
+    font-size: 16px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-todo-button {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* padding: 10px 15px; */
+}
+
+.reset-button {
+    background-color: rgb(89, 89, 164);
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reset-button:hover {
+    background-color: rgb(40, 40, 126);
+
+}
+
+.add-todo-button:hover {
+    background-color: green;
+}
+
+.delete-todo-button {
+
+    background-color: #f44336;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.delete-todo-button:hover {
+    background-color: #d32f2f;
+}
+
+.finished-button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    padding-left: 5px;
+}
+
+.is-finished {
+    background-color: darkgoldenrod;
+}
+
+.is-removed {
+    background-color: darkgoldenrod;
+}
+
+.finished {
+    text-decoration: line-through;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ccc; */
+}
+
+li span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/*li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #d32f2f;
+} */
