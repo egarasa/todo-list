@@ -84,7 +84,7 @@ function markFinished(checkbox, taskId) {
     taskText.classList.toggle("finished");
     dueInfo.classList.toggle("finished");
     dueTime.classList.toggle("finished");
-    console.log(taskText.classList.contains("finished"));
+    // console.log(taskText.classList.contains("finished"));
 
     const filteredTask = toDoList.filter(prop => {
         if (prop.taskId === taskId) {
